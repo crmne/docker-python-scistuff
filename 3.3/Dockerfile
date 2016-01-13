@@ -1,11 +1,10 @@
 FROM python:3.3
-MAINTAINER Tobias Kölling <tobias.koelling@physik.uni-muenchen.de>
+MAINTAINER Carmine Paolino <carmine@paolino.me>
 RUN apt-get update && apt-get -y install \
-    liblapack-dev \
-    libatlas-dev \
-    gfortran
+    gfortran \
+    libopenblas-dev
 RUN pip install --no-cache-dir \
     numpy \
     scipy \
-    sympy \
-    matplotlib
+    matplotlib \
+    scikit-learn
